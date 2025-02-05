@@ -1,0 +1,11 @@
+services:
+  pg:
+    image: postgres:latest
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_PASSWORD=${PG_PASSWORD}
+      - POSTGRES_USER=${PG_USER}
+      - POSTGRES_DB=${PG_DATABASE}
+    ports:
+      - "5432:5432"
